@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <title>Biografi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #eef1f5;
+            overflow-x: hidden;
+        }
+
+        nav {
+            background-color: #f5f5f5;
+            box-shadow: 3px -1px 10px 0px rgba(0, 0, 0, 0.18);
+            border: 1px solid rgb(222, 222, 222);
+            padding: 13px 20px;
+            position: fixed;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 65%;
+            border-radius: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 20px;
+            animation: slideDown 2s ease forwards;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -40px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        nav a {
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            font-size: 11.5px;
+            color: rgb(122, 122, 122);
+            padding: 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline 2px solid rgb(123, 123, 123);
+            text-underline-offset: 5px;
+        }
+
+        nav h2 {
+            font-family: 'Poppins', sans-serif;
+            padding-left: 20px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .text-pembuka {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 200;
+            color: #3c3c3c;
+            padding-top: 250px;
+            padding-left: 50px;
+            font-size: 12px;
+        }
+
+        .text-pembuka1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            padding-left: 50px;
+            padding-top: 10px;
+            font-size: 40px;
+        }
+
+        .text-pembuka2 {
+            font-family: 'Poppins', sans-serif;
+            color: #3c3c3c;
+            font-weight: 200;
+            padding-left: 50px;
+            padding-top: 13px;
+            padding-bottom: 30px;
+            width: 450px;
+            font-size: 12.5px;
+        }
+
+        .button1 {
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            border-radius: 40px;
+            padding: 10px 20px;
+            font-weight: 600;
+            margin-left: 50px;
+        }
+
+        .foto {
+            width: 300px;
+            height: 340px;
+            object-fit: cover;
+            margin-left: 950px;
+            margin-top: -280px;
+            border-radius: 20px;
+        }
+
+        .foto:hover {
+            transform: scale(1.02);
+            transition: 0.5s ease-in-out;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: row;
+            margin-top: 70px;
+            gap: 20px;
+        }
+
+        .card1 {
+            background-color: white;
+            border: 2px solid rgb(223, 225, 233);
+            width: 330px;
+            height: 95px;
+            margin-left: 50px;
+            border-radius: 15px;
+        }
+
+        .card2 {
+            background-color: white;
+            border: 2px solid rgb(223, 225, 233);
+            width: 330px;
+            height: 95px;
+            border-radius: 15px;
+        }
+
+        .card3 {
+            background-color: white;
+            border: 2px solid rgb(223, 225, 233);
+            width: 330px;
+            height: 95px;
+            border-radius: 15px;
+        }
+
+        .card4 {
+            background-color: white;
+            border: 2px solid rgb(223, 225, 233);
+            width: 330px;
+            height: 95px;
+            border-radius: 15px;
+        }
+
+        .text-card1 {
+            font-family: 'Poppins', sans-serif;
+            color: #6a6a6a;
+            font-weight: 400;
+            padding-top: 20px;
+            font-size: 12px;
+            padding-left: 20px;
+        }
+
+        .text1-card1 {
+            font-family: 'Poppins', sans-serif;
+            color: #0c0c0c;
+            font-weight: 600;
+            font-size: 15px;
+            padding-top: 5px;
+            padding-left: 20px;
+        }
+
+        .masakecil {
+            background-color: white;
+            width: 100%;
+            padding: 100px 0;
+            margin-top: 70px;
+        }
+
+        .container-masakecil {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .foto-masakecil {
+            width: 500px;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 24px;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .foto-masakecil:hover {
+            transform: scale(1.02);
+        }
+
+        .text-content-masakecil {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 500px;
+        }
+
+        .text-masakecil {
+            font-family: 'Playfair Display', serif;
+            color: #1a1a1a;
+            font-weight: 700;
+            font-size: 36px;
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .text-masakecil::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: #000;
+            border-radius: 2px;
+        }
+
+        .list-masakecil {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .text-masakecil1,
+        .text1-masakecil1 {
+            font-family: 'Poppins', sans-serif;
+            color: #4a4a4a;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.6;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .text-masakecil1::before,
+        .text1-masakecil1::before {
+            content: "•";
+            color: #000;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 1;
+        }
+
+        .Pendidikan {
+            background-color: #eef1f5;
+            width: 100%;
+            height: 100px;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <h2>Ir. Soekarno</h2>
+        <ul>
+            <li>
+                <a href="#">Profil</a>
+                <a href="#">Perjalanan</a>
+                <a href="#">Pendidikan</a>
+                <a href="#">kemerdekaan</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div>
+        <h5 class="text-pembuka">BAPAK PROKLAMATOR</h5>
+        <h1 class="text-pembuka1">Ir. Soekarno</h1>
+        <h4 class="text-pembuka2">Presiden pertama Republik Indonesia dan tokoh sentral dalam perjuangan kemerdekaan
+            bangsa.</h4>
+        <a href="#" class="button1">Jelajahi Biografi</a>
+    </div>
+    <img src="image.png" class="foto">
+
+    <div class="card">
+        <div class="card1">
+            <h5 class="text-card1">Nama Lahir</h5>
+            <h3 class="text1-card1">Koesno Sosrodiharjo</h3>
+        </div>
+
+        <div class="card2">
+            <h5 class="text-card1">Lahir</h5>
+            <h3 class="text1-card1">6 Juni 1901</h3>
+        </div>
+
+        <div class="card3">
+            <h5 class="text-card1">Tempat</h5>
+            <h3 class="text1-card1">Surabaya</h3>
+        </div>
+
+        <div class="card4">
+            <h5 class="text-card1">Saudara</h5>
+            <h3 class="text1-card1">Sukarmini</h3>
+        </div>
+    </div>
+
+    <section class="masakecil">
+        <div class="container-masakecil">
+            <img src="image copy.png" class="foto-masakecil" alt="Soekarno Masa Kecil">
+            <div class="text-content-masakecil">
+                <h3 class="text-masakecil">Masa Kecil</h3>
+                <div class="list-masakecil">
+                    <h5 class="text-masakecil1">Masa kecil banyak dihabiskan di Blitar.</h5>
+                    <h5 class="text1-masakecil1">Pernah tinggal dengan kakek di Tulungagung.</h5>
+                    <h5 class="text1-masakecil1">Sempat sekolah namun pindah ke Mojokerto.</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Pendidikan">
+        <h3 class="text-pendidikan">Pendidikan</h3>
+        <div class="container-pendidikan">
+            <div class="text-content-pendidikan">
+                <div class="list-pendidikan">
+                    <h5 class="text-pendidikan1">Masa kecil banyak dihabiskan di Blitar.</h5>
+                    <h5 class="text1-pendidikan1">Pernah tinggal dengan kakek di Tulungagung.</h5>
+                    <h5 class="text1-pendidikan1">Sempat sekolah namun pindah ke Mojokerto.</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
