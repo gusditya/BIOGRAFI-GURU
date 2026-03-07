@@ -62,6 +62,7 @@
             font-size: 11.5px;
             color: rgb(122, 122, 122);
             padding: 10px;
+            border-radius: 10px;
         }
 
         nav a:hover {
@@ -334,25 +335,48 @@
             margin-left: 20px;
         }
 
-        .Perjuangan {
+        .text-perjalanan {
+            font-family: 'Poppins', sans-serif;
+            color: #1a1a1a;
+            font-weight: 800;
+            font-size: 28px;
+            padding-top: 80px;
+            text-align: center;
+            padding-bottom: 30px;
+        }
+
+        .Perjalanan {
             background-color: white;
             width: 100%;
             height: 600px;
         }
 
-        .card-perjuangan {
+        .card-perjalanan {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            gap: 10px;
+        }
+
+        .perjalanan-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 15px;
         }
 
         .tahun {
             font-family: 'Poppins', sans-serif;
             color: #0c0c0c;
+            text-shadow: 5px 1px 2px rgba(0, 0, 0, 0.12);
             font-weight: 600;
             font-size: 15px;
-            padding-top: 20px;
             padding-left: 50px;
+            width: 120px;
+            text-align: left;
         }
 
         .pelaksanaan {
@@ -360,6 +384,28 @@
             color: #4a4a4a;
             font-weight: 400;
             font-size: 12px;
+        }
+
+        .card-pelaksanaan {
+            background-color: #ffffffde;
+            border: 2px solid rgb(230, 232, 239);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            ;
+            width: 600px;
+            height: 60px;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+        }
+
+        .next-perjalanan {
+            background-color: #eef1f5;
+            width: 100%;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -380,8 +426,7 @@
     <div>
         <h5 class="text-pembuka">BAPAK PROKLAMATOR</h5>
         <h1 class="text-pembuka1">Ir. Soekarno</h1>
-        <h4 class="text-pembuka2">Presiden pertama Republik Indonesia dan tokoh sentral dalam perjuangan kemerdekaan
-            bangsa.</h4>
+        <h4 class="text-pembuka2">Presiden pertama Republik Indonesia dan tokoh sentral dalam perjuangan kemerdekaan bangsa.</h4>
         <a href="#" class="button1">Jelajahi Biografi</a>
     </div>
     <img src="image.png" class="foto">
@@ -394,11 +439,11 @@
 
         <div class="card2">
             <h5 class="text-card1">Lahir</h5>
-            <h3 class="text1-card1">6 Juni 1901</h3>
+            <h3 class="text1-card1">6 de junio de 1901</h3>
         </div>
 
         <div class="card3">
-            <h5 class="text-card1">Tempat</h5>
+            <h5 class="text-card1">Lahirr</h5>
             <h3 class="text1-card1">Surabaya</h3>
         </div>
 
@@ -442,11 +487,38 @@
         </div>
     </section>
 
-    <section class="Perjuangan">
-        <h3 class="text-pendidikan"> Perjuangan</h3>
-        <div class="card-perjuangan">
-            <span class="tahun">1927 </span><span class="pelaksanaan">Mendirikan Partai Nasional Indonesia.</span>
+    <section class="Perjalanan">
+        <h3 class="text-perjalanan">Perjalanan</h3>
+        <div class="card-perjalanan">
+            <div class="perjalanan-item">
+                <h3 class="tahun">1927</h3>
+                <div class="card-pelaksanaan">
+                    <h2 class="pelaksanaan">Mendirikan Partai Nasional Indonesia.</h2>
+                </div>
+            </div>
+            <div class="perjalanan-item">
+                <h3 class="tahun">1929</h3>
+                <div class="card-pelaksanaan">
+                    <h2 class="pelaksanaan">Ditangkap Belanda dan dipenjara.</h2>
+                </div>
+            </div>
+            <div class="perjalanan-item">
+                <h3 class="tahun">1930</h3>
+                <div class="card-pelaksanaan">
+                    <h2 class="pelaksanaan">Menulis pledoi Indonesia Menggugat.</h2>
+                </div>
+            </div>
+            <div class="perjalanan-item">
+                <h3 class="tahun">1933 - 1938</h3>
+                <div class="card-pelaksanaan">
+                    <h2 class="pelaksanaan">Diasingkan ke Flores dan Bengkulu.</h2>
+                </div>
+            </div>
         </div>
+    </section>
+
+    <section class="next-perjalanan">
+
     </section>
 
 </body>
