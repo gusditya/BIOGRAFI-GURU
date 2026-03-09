@@ -212,7 +212,7 @@
             object-fit: cover;
             border-radius: 24px;
             border: 1px solid rgba(0, 0, 0, 0.05);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease;
         }
 
@@ -402,10 +402,86 @@
         .next-perjalanan {
             background-color: #eef1f5;
             width: 100%;
-            height: 400px;
+            height: 500px;
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        .foto-halaman3 {
+            width: 500px;
+            height: 340px;
+            object-fit: cover;
+            margin-left: 257px;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+        }
+
+        .judul-perjalanan {
+            font-family: 'Poppins', sans-serif;
+            font-size: 30px;
+            padding-bottom: 20px;
+        }
+
+        .text-item {
+            font-size: 15px;
+            font-weight: 100;
+            text-align: left;
+            padding-bottom: 10px;
+        }
+
+        .text-item::before {
+            content: "•";
+            color: #000;
+            font-size: 20px;
+            line-height: 1;
+            padding-right: 20px;
+            padding-left: 70px;
+        }
+
+        footer {
+            background: linear-gradient(to right, #12192a 30%, #25324e 100%);
+            width: 100%;
+            height: 250px;
+        }
+
+        footer h2 {
+            font-family: 'Poppins', sans-serif;
+            color: white;
+            font-size: 25px;
+            font-weight: 700;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        footer h4 {
+            font-family: 'Poppins', sans-serif;
+            color: rgb(233, 233, 233);
+            font-size: 13px;
+            font-weight: 200;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            text-align: center;
+            padding-top: 10px;
+            padding-left: 420px;
+            width: 1050px;
+        }
+
+        footer a {
+            background-color: white;
+            font-family: 'Poppins', sans-serif;
+            padding: 8px 15px;
+            border-radius: 40px;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            font-size: 10px;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -426,7 +502,8 @@
     <div>
         <h5 class="text-pembuka">BAPAK PROKLAMATOR</h5>
         <h1 class="text-pembuka1">Ir. Soekarno</h1>
-        <h4 class="text-pembuka2">Presiden pertama Republik Indonesia dan tokoh sentral dalam perjuangan kemerdekaan bangsa.</h4>
+        <h4 class="text-pembuka2">Presiden pertama Republik Indonesia dan tokoh sentral dalam perjuangan kemerdekaan
+            bangsa.</h4>
         <a href="#" class="button1">Jelajahi Biografi</a>
     </div>
     <img src="image.png" class="foto">
@@ -518,8 +595,21 @@
     </section>
 
     <section class="next-perjalanan">
-
+        <div class="text-perjalanan">
+            <h3 class="judul-perjalanan">Rengasdengklok</h3>
+            <li class="text-item">Terjadi 16 Agustus 1945.</li>
+            <li class="text-item">Pemuda mendesak proklamasi segera.</li>
+            <li class="text-item">Momentum menuju kemerdekaan.</li>
+        </div>
+        <img src="image copy 2.png" class="foto-halaman3">
     </section>
+
+    <footer>
+        <h2>Proklamasi Kemerdekaan</h2>
+        <h4>17 Agustus 1945, Soekarno membacakan teks proklamasi. Sehari kemudian beliau dan Mohammad Hatta diangkat
+            sebagai Presiden dan Wakil Presiden RI.</h4>
+        <a href="#">Tokoh Proklamator</a>
+    </footer>
 
 </body>
 
