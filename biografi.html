@@ -7,6 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
     <title>Biografi</title>
     <style>
         * {
@@ -145,6 +147,7 @@
             height: 95px;
             margin-left: 50px;
             border-radius: 15px;
+
         }
 
         .card2 {
@@ -467,6 +470,7 @@
             text-align: center;
             padding-top: 10px;
             padding-left: 420px;
+            padding-bottom: 20px;
             width: 1050px;
         }
 
@@ -478,10 +482,22 @@
             text-align: center;
             text-decoration: none;
             color: black;
-            font-size: 10px;
+            font-size: 12px;
             font-weight: 500;
-            display: inline-block;
-            margin-top: 10px;
+            margin-left: 672px;
+        }
+
+        footer h5 {
+            font-family: 'Poppins', sans-serif;
+            padding: 8px 15px;
+            border-radius: 40px;
+            text-align: center;
+            text-decoration: none;
+            color: rgb(171, 171, 171);
+            font-size: 12px;
+            font-weight: 200;
+            margin-left: -40px;
+            padding-top: 40px;
         }
     </style>
 </head>
@@ -508,7 +524,7 @@
     </div>
     <img src="image.png" class="foto">
 
-    <div class="card">
+    <div class="card" data-aos="fade-up">
         <div class="card1">
             <h5 class="text-card1">Nama Lahir</h5>
             <h3 class="text1-card1">Koesno Sosrodiharjo</h3>
@@ -532,7 +548,7 @@
 
     <section class="masakecil">
         <div class="container-masakecil">
-            <img src="image copy.png" class="foto-masakecil" alt="Soekarno Masa Kecil">
+            <img src="image copy.png" class="foto-masakecil" data-aos="fade-right">
             <div class="text-content-masakecil">
                 <h3 class="text-masakecil">Masa Kecil</h3>
                 <div class="list-masakecil">
@@ -547,17 +563,17 @@
     <section class="Pendidikan">
         <h3 class="text-pendidikan">Pendidikan</h3>
         <div class="list-pendidikan">
-            <div class="list">
+            <div class="list" data-aos="fade-up">
                 <h3 class="judul-list">ELS</h3>
                 <h5 class="text-pendidikan1">Masuk Europeesche Lagere School untuk persiapan HBS.</h5>
             </div>
 
-            <div class="list1">
+            <div class="list1" data-aos="fade-up" data-aos-delay="100">
                 <h3 class="judul-list">HBS Surabaya</h3>
                 <h5 class="text-pendidikan1">Belajar politik di rumah H.O.S. Tjokroaminoto.</h5>
             </div>
 
-            <div class="list1">
+            <div class="list1" data-aos="fade-up" data-aos-delay="200">
                 <h3 class="judul-list">THS Bandung</h3>
                 <h5 class="text-pendidikan1">Lulus 1926 sebagai Insinyur (ITB sekarang).</h5>
             </div>
@@ -567,25 +583,25 @@
     <section class="Perjalanan">
         <h3 class="text-perjalanan">Perjalanan</h3>
         <div class="card-perjalanan">
-            <div class="perjalanan-item">
+            <div class="perjalanan-item" data-aos="fade-right" data-aos-delay="100">
                 <h3 class="tahun">1927</h3>
                 <div class="card-pelaksanaan">
                     <h2 class="pelaksanaan">Mendirikan Partai Nasional Indonesia.</h2>
                 </div>
             </div>
-            <div class="perjalanan-item">
+            <div class="perjalanan-item" data-aos="fade-right" data-aos-delay="200">
                 <h3 class="tahun">1929</h3>
                 <div class="card-pelaksanaan">
                     <h2 class="pelaksanaan">Ditangkap Belanda dan dipenjara.</h2>
                 </div>
             </div>
-            <div class="perjalanan-item">
+            <div class="perjalanan-item" data-aos="fade-right" data-aos-delay="250">
                 <h3 class="tahun">1930</h3>
                 <div class="card-pelaksanaan">
                     <h2 class="pelaksanaan">Menulis pledoi Indonesia Menggugat.</h2>
                 </div>
             </div>
-            <div class="perjalanan-item">
+            <div class="perjalanan-item" data-aos="fade-right" data-aos-delay="300">
                 <h3 class="tahun">1933 - 1938</h3>
                 <div class="card-pelaksanaan">
                     <h2 class="pelaksanaan">Diasingkan ke Flores dan Bengkulu.</h2>
@@ -605,11 +621,20 @@
     </section>
 
     <footer>
-        <h2>Proklamasi Kemerdekaan</h2>
-        <h4>17 Agustus 1945, Soekarno membacakan teks proklamasi. Sehari kemudian beliau dan Mohammad Hatta diangkat
+        <h2 data-aos="fade-down" data-aos-delay="220">Proklamasi Kemerdekaan</h2>
+        <h4 data-aos="fade-down" data-aos-delay="250">17 Agustus 1945, Soekarno membacakan teks proklamasi. Sehari kemudian beliau dan Mohammad Hatta diangkat
             sebagai Presiden dan Wakil Presiden RI.</h4>
         <a href="#">Tokoh Proklamator</a>
+        <h5>© 2026 Biografi Soekarno</h5>
     </footer>
+
+    <script>
+        AOS.init({
+            once: false,
+            duration: 800,
+            offset:100
+        });
+    </script>
 
 </body>
 
