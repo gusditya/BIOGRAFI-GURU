@@ -96,6 +96,51 @@
             font-size: 40px;
         }
 
+        .typewriter-effect {
+            overflow: hidden;
+            border-right: 3px solid #000;
+            white-space: nowrap;
+            animation: typewriter 6s infinite, blink-caret 0.75s infinite;
+        }
+
+        @keyframes typewriter {
+
+            0%,
+            10% {
+                width: 0%;
+            }
+
+            40%,
+            50% {
+                width: 20%;
+            }
+
+            60%,
+            90% {
+                width: 0%;
+            }
+
+            100% {
+                width: 0%;
+            }
+        }
+
+        @keyframes blink-caret {
+
+            0%,
+            50%,
+            100% {
+                border-color: transparent;
+            }
+
+            25%,
+            75% {
+                border-color: #000;
+            }
+        }
+
+
+
         .text-pembuka2 {
             font-family: 'Poppins', sans-serif;
             color: #3c3c3c;
@@ -517,7 +562,7 @@
 
     <div>
         <h5 class="text-pembuka">BAPAK PROKLAMATOR</h5>
-        <h1 class="text-pembuka1">Ir. Soekarno</h1>
+        <h1 class="text-pembuka1 typewriter-effect">Ir. Soekarno</h1>
         <h4 class="text-pembuka2">Presiden pertama Republik Indonesia dan tokoh sentral dalam perjuangan kemerdekaan
             bangsa.</h4>
         <a href="#" class="button1">Jelajahi Biografi</a>
@@ -550,18 +595,21 @@
         <div class="container-masakecil">
             <img src="image copy.png" class="foto-masakecil" data-aos="fade-right">
             <div class="text-content-masakecil">
-                <h3 class="text-masakecil">Masa Kecil</h3>
+                <h3 class="text-masakecil" data-aos="fade-left" data-aos-delay="100">Masa Kecil</h3>
                 <div class="list-masakecil">
-                    <h5 class="text-masakecil1">Masa kecil banyak dihabiskan di Blitar.</h5>
-                    <h5 class="text1-masakecil1">Pernah tinggal dengan kakek di Tulungagung.</h5>
-                    <h5 class="text1-masakecil1">Sempat sekolah namun pindah ke Mojokerto.</h5>
+                    <h5 class="text-masakecil1" data-aos="fade-left" data-aos-delay="200">Masa kecil banyak dihabiskan
+                        di Blitar.</h5>
+                    <h5 class="text1-masakecil1" data-aos="fade-left" data-aos-delay="300">Pernah tinggal dengan kakek
+                        di Tulungagung.</h5>
+                    <h5 class="text1-masakecil1" data-aos="fade-left" data-aos-delay="400">Sempat sekolah namun pindah
+                        ke Mojokerto.</h5>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="Pendidikan">
-        <h3 class="text-pendidikan">Pendidikan</h3>
+        <h3 class="text-pendidikan" data-aos="fade-down">Pendidikan</h3>
         <div class="list-pendidikan">
             <div class="list" data-aos="fade-up">
                 <h3 class="judul-list">ELS</h3>
@@ -581,7 +629,7 @@
     </section>
 
     <section class="Perjalanan">
-        <h3 class="text-perjalanan">Perjalanan</h3>
+        <h3 class="text-perjalanan" data-aos="fade-down">Perjalanan</h3>
         <div class="card-perjalanan">
             <div class="perjalanan-item" data-aos="fade-right" data-aos-delay="100">
                 <h3 class="tahun">1927</h3>
@@ -611,18 +659,19 @@
     </section>
 
     <section class="next-perjalanan">
-        <div class="text-perjalanan">
+        <div class="text-perjalanan" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
             <h3 class="judul-perjalanan">Rengasdengklok</h3>
             <li class="text-item">Terjadi 16 Agustus 1945.</li>
             <li class="text-item">Pemuda mendesak proklamasi segera.</li>
             <li class="text-item">Momentum menuju kemerdekaan.</li>
         </div>
-        <img src="image copy 2.png" class="foto-halaman3">
+        <img src="image copy 2.png" class="foto-halaman3" data-aos="zoom-in-up">
     </section>
 
     <footer>
         <h2 data-aos="fade-down" data-aos-delay="220">Proklamasi Kemerdekaan</h2>
-        <h4 data-aos="fade-down" data-aos-delay="250">17 Agustus 1945, Soekarno membacakan teks proklamasi. Sehari kemudian beliau dan Mohammad Hatta diangkat
+        <h4 data-aos="fade-down" data-aos-delay="250">17 Agustus 1945, Soekarno membacakan teks proklamasi. Sehari
+            kemudian beliau dan Mohammad Hatta diangkat
             sebagai Presiden dan Wakil Presiden RI.</h4>
         <a href="#">Tokoh Proklamator</a>
         <h5>© 2026 Biografi Soekarno</h5>
@@ -632,7 +681,7 @@
         AOS.init({
             once: false,
             duration: 800,
-            offset:100
+            offset: 100
         });
     </script>
 
