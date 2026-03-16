@@ -100,7 +100,7 @@
             overflow: hidden;
             border-right: 3px solid #000;
             white-space: nowrap;
-            animation: typewriter 6s infinite, blink-caret 0.75s infinite;
+            animation: typewriter 15s infinite, blink-caret 0.75s infinite;
         }
 
         @keyframes typewriter {
@@ -112,7 +112,7 @@
 
             40%,
             50% {
-                width: 20%;
+                width: 46%;
             }
 
             60%,
@@ -217,6 +217,90 @@
             width: 330px;
             height: 95px;
             border-radius: 15px;
+        }
+
+        .text-anggota {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            text-align: center;
+            padding-top: 70px;
+        }
+
+        .anggota-kelompok {
+            display: flex;
+            flex-direction: row;
+            overflow-x: auto;
+            scrollbar-width: none;
+            gap: 20px;
+        }
+
+        .card-anggota {
+            background-color: white;
+            border: 2px solid rgb(230, 232, 236);
+            min-width: 350px;
+            height: 160px;
+            flex-shrink: 0;
+            margin-top: 20px;
+            margin-left: 20px;
+            border-radius: 15px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .card-anggota1 {
+            background-color: white;
+            border: 2px solid rgb(230, 232, 236);
+            min-width: 350px;
+            height: 160px;
+            flex-shrink: 0;
+            margin-top: 20px;
+            border-radius: 15px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .card-anggota2 {
+            background-color: white;
+            border: 2px solid rgb(230, 232, 236);
+            min-width: 350px;
+            height: 160px;
+            flex-shrink: 0;
+            margin-top: 20px;
+            margin-right: 20px;
+            border-radius: 15px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .foto-kelompok {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nama-anggota {
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .jabatan-anggota {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            color: #6f7070;
+            font-size: 12px;
         }
 
         .text-card1 {
@@ -326,7 +410,15 @@
         .Pendidikan {
             background-color: #eef1f5;
             width: 100%;
-            height: 350px;
+            height: 550px;
+        }
+
+        .grisda {
+            width: 445px;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
 
         .text-pendidikan {
@@ -350,7 +442,7 @@
             background-color: white;
             border: 3px solid rgb(223, 225, 233);
             width: 450px;
-            height: 100px;
+            height: 300px;
             margin-left: 50px;
             border-radius: 15px;
         }
@@ -359,7 +451,7 @@
             background-color: white;
             border: 3px solid rgb(223, 225, 233);
             width: 450px;
-            height: 100px;
+            height: 300px;
             border-radius: 15px;
         }
 
@@ -549,7 +641,7 @@
 
 <body>
     <nav>
-        <h2>Ir. Soekarno</h2>
+        <h2>Bu Rumasni</h2>
         <ul>
             <li>
                 <a href="#">Profil</a>
@@ -561,33 +653,65 @@
     </nav>
 
     <div>
-        <h5 class="text-pembuka">BAPAK PROKLAMATOR</h5>
-        <h1 class="text-pembuka1 typewriter-effect">Ir. Soekarno</h1>
-        <h4 class="text-pembuka2">Presiden pertama Republik Indonesia dan tokoh sentral dalam perjuangan kemerdekaan
-            bangsa.</h4>
+        <h5 class="text-pembuka">GURU SMK TI BALI GLOBAL DENPASAR</h5>
+        <h1 class="text-pembuka1 typewriter-effect">Ni Wayan Rumasni,S.Pd.,M.Pd</h1>
+        <h4 class="text-pembuka2">Salah satu Guru yang mengajar di SMK Ti Bali Global Denpasar dengan gaya bahasa yang digemari siswa</h4>
         <a href="#" class="button1">Jelajahi Biografi</a>
     </div>
-    <img src="image.png" class="foto">
+    <img src="guru.png" class="foto">
 
     <div class="card" data-aos="fade-up">
         <div class="card1">
             <h5 class="text-card1">Nama Lahir</h5>
-            <h3 class="text1-card1">Koesno Sosrodiharjo</h3>
+            <h3 class="text1-card1">Ni Wayan Rumasni</h3>
         </div>
 
         <div class="card2">
-            <h5 class="text-card1">Lahir</h5>
-            <h3 class="text1-card1">6 de junio de 1901</h3>
+            <h5 class="text-card1">Tahun Lahir</h5>
+            <h3 class="text1-card1">9 Desember 1970</h3>
         </div>
 
         <div class="card3">
-            <h5 class="text-card1">Lahirr</h5>
-            <h3 class="text1-card1">Surabaya</h3>
+            <h5 class="text-card1">Tempat Lahir</h5>
+            <h3 class="text1-card1">Tabanan</h3>
         </div>
 
         <div class="card4">
-            <h5 class="text-card1">Saudara</h5>
-            <h3 class="text1-card1">Sukarmini</h3>
+            <h5 class="text-card1">Jabatan</h5>
+            <h3 class="text1-card1">Kepala Perpustakaan</h3>
+        </div>
+    </div>
+
+    <h1 class="text-anggota">ANGGOTA KELOMPOK</h1>
+    <div class="anggota-kelompok">
+        <div class="card-anggota">
+            <img src="image copy 2.png" class="foto-kelompok">
+            <h4 class="nama-anggota">Lionel Justin Setiawan</h4>
+            <h5 class="jabatan-anggota">Ketua Kelompok</h5>
+        </div>
+
+        <div class="card-anggota1">
+            <img src="image copy 2.png" class="foto-kelompok">
+            <h4 class="nama-anggota">I Wayan Agus Aditya Pratama</h4>
+            <h5 class="jabatan-anggota">Anggota Kelompok</h5>
+        </div>
+
+        <div class="card-anggota1">
+            <img src="image copy 2.png" class="foto-kelompok">
+            <h4 class="nama-anggota">Nicolas Galung Putra</h4>
+            <h5 class="jabatan-anggota">Anggota Kelompok</h5>
+        </div>
+
+        <div class="card-anggota1">
+            <img src="image copy 2.png" class="foto-kelompok">
+            <h4 class="nama-anggota">I Kadek Putra Suryawan</h4>
+            <h5 class="jabatan-anggota">Anggota Kelompok</h5>
+        </div>
+
+        <div class="card-anggota2">
+            <img src="image copy 2.png" class="foto-kelompok">
+            <h4 class="nama-anggota">Albin Ivandito</h4>
+            <h5 class="jabatan-anggota">Anggota Kelompok</h5>
         </div>
     </div>
 
@@ -612,18 +736,21 @@
         <h3 class="text-pendidikan" data-aos="fade-down">Pendidikan</h3>
         <div class="list-pendidikan">
             <div class="list" data-aos="fade-up">
-                <h3 class="judul-list">ELS</h3>
-                <h5 class="text-pendidikan1">Masuk Europeesche Lagere School untuk persiapan HBS.</h5>
+                <img src="grisda.png" class="grisda">
+                <h3 class="judul-list">Sekolah Menengah Pertama (SMP)</h3>
+                <h5 class="text-pendidikan1">Menempuh pendidikan di SMP PGRI 2 Denpasar.</h5>
             </div>
 
             <div class="list1" data-aos="fade-up" data-aos-delay="100">
-                <h3 class="judul-list">HBS Surabaya</h3>
-                <h5 class="text-pendidikan1">Belajar politik di rumah H.O.S. Tjokroaminoto.</h5>
+                <img src="wirabhakti.png" class="grisda">
+                <h3 class="judul-list">Sekolah Menengah Atas (SMA)</h3>
+                <h5 class="text-pendidikan1">Melanjutkan pendidikan di SMA Wira Bhakti Denpasar</h5>
             </div>
 
             <div class="list1" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="judul-list">THS Bandung</h3>
-                <h5 class="text-pendidikan1">Lulus 1926 sebagai Insinyur (ITB sekarang).</h5>
+                <img src="undiksha.png" class="grisda">
+                <h3 class="judul-list">Kuliah</h3>
+                <h5 class="text-pendidikan1">S1 hingga S2 di Kampus Undikhsa dengan jurusan Bahasa Indonesia</h5>
             </div>
         </div>
     </section>
