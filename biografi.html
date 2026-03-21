@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <title>Biografi</title>
+    <title>Biografi - Ni Wayan Rumasni</title>
     <style>
         * {
             margin: 0;
@@ -22,9 +22,10 @@
             padding: 0;
             background-color: #eef1f5;
             overflow-x: hidden;
+            font-family: 'Poppins', sans-serif;
         }
 
-        /* --- Navbar Responsif --- */
+        /* --- Navbar --- */
         nav {
             background-color: #f5f5f5de;
             box-shadow: 3px -1px 10px 0px rgba(0, 0, 0, 0.18);
@@ -68,7 +69,6 @@
         }
 
         nav a {
-            font-family: 'Poppins', sans-serif;
             text-decoration: none;
             font-size: 11.5px;
             color: rgb(122, 122, 122);
@@ -76,19 +76,13 @@
             border-radius: 10px;
         }
 
-        nav a:hover {
-            text-decoration: underline 2px solid rgb(123, 123, 123);
-            text-underline-offset: 5px;
-        }
-
         nav h2 {
-            font-family: 'Poppins', sans-serif;
             padding-left: 20px;
             font-weight: 600;
             font-size: 15px;
         }
 
-        /* --- Hero Section Responsif (Membungkus Text & Foto) --- */
+        /* --- Hero --- */
         .hero {
             display: flex;
             align-items: center;
@@ -108,20 +102,17 @@
         }
 
         .text-pembuka {
-            font-family: 'Poppins', sans-serif;
             font-weight: 200;
             color: #3c3c3c;
             font-size: 12px;
         }
 
         .text-pembuka1 {
-            font-family: 'Poppins', sans-serif;
             font-weight: 800;
             padding-top: 10px;
             font-size: clamp(28px, 4vw, 40px);
         }
 
-        /* Perbaikan Typewriter agar 100% mengikuti panjang text */
         .typewriter-effect {
             overflow: hidden;
             border-right: 3px solid #000;
@@ -167,7 +158,6 @@
         }
 
         .text-pembuka2 {
-            font-family: 'Poppins', sans-serif;
             color: #3c3c3c;
             font-weight: 200;
             padding-top: 13px;
@@ -182,7 +172,6 @@
             background-color: black;
             color: white;
             text-decoration: none;
-            font-family: 'Poppins', sans-serif;
             font-size: 12px;
             border-radius: 40px;
             padding: 10px 20px;
@@ -198,12 +187,7 @@
             border-radius: 20px;
         }
 
-        .foto:hover {
-            transform: scale(1.02);
-            transition: 0.5s ease-in-out;
-        }
-
-        /* --- Cards Responsif --- */
+        /* --- Cards Info --- */
         .card {
             display: flex;
             flex-wrap: wrap;
@@ -213,10 +197,7 @@
             padding: 0 20px;
         }
 
-        .card1,
-        .card2,
-        .card3,
-        .card4 {
+        .card-item {
             background-color: white;
             border: 2px solid rgb(223, 225, 233);
             width: 100%;
@@ -228,9 +209,22 @@
             justify-content: center;
         }
 
+        .text-card1 {
+            color: #6a6a6a;
+            font-size: 12px;
+            padding-left: 20px;
+        }
+
+        .text1-card1 {
+            color: #0c0c0c;
+            font-weight: 600;
+            font-size: 15px;
+            padding-top: 5px;
+            padding-left: 20px;
+        }
+
         /* --- Anggota Kelompok --- */
         .text-anggota {
-            font-family: 'Poppins', sans-serif;
             font-weight: 600;
             font-size: 20px;
             text-align: center;
@@ -245,18 +239,11 @@
             padding: 20px;
         }
 
-        .anggota-kelompok::-webkit-scrollbar {
-            display: none;
-        }
-
-        .card-anggota,
-        .card-anggota1,
-        .card-anggota2 {
+        .card-anggota {
             background-color: white;
             border: 2px solid rgb(230, 232, 236);
             min-width: 350px;
             height: 160px;
-            flex-shrink: 0;
             border-radius: 15px;
             display: flex;
             align-items: center;
@@ -273,34 +260,13 @@
         }
 
         .nama-anggota {
-            text-align: center;
-            font-family: 'Poppins', sans-serif;
             font-size: 15px;
             font-weight: 600;
         }
 
         .jabatan-anggota {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 400;
             color: #6f7070;
             font-size: 12px;
-        }
-
-        .text-card1 {
-            font-family: 'Poppins', sans-serif;
-            color: #6a6a6a;
-            font-weight: 400;
-            font-size: 12px;
-            padding-left: 20px;
-        }
-
-        .text1-card1 {
-            font-family: 'Poppins', sans-serif;
-            color: #0c0c0c;
-            font-weight: 600;
-            font-size: 15px;
-            padding-top: 5px;
-            padding-left: 20px;
         }
 
         /* --- Masa Kecil --- */
@@ -324,29 +290,12 @@
         .foto-masakecil {
             width: 100%;
             max-width: 500px;
-            height: auto;
-            object-fit: cover;
             border-radius: 24px;
-            border: 1px solid rgba(0, 0, 0, 0.05);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .foto-masakecil:hover {
-            transform: scale(1.02);
-        }
-
-        .text-content-masakecil {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            max-width: 500px;
         }
 
         .text-masakecil {
             font-family: 'Playfair Display', serif;
-            color: #1a1a1a;
-            font-weight: 700;
             font-size: clamp(28px, 4vw, 36px);
             margin-bottom: 10px;
             position: relative;
@@ -360,49 +309,23 @@
             width: 60px;
             height: 4px;
             background-color: #000;
-            border-radius: 2px;
         }
 
-        .list-masakecil {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-            margin-top: 15px;
-        }
-
-        .text-masakecil1,
-        .text1-masakecil1 {
-            font-family: 'Poppins', sans-serif;
+        .text-masakecil1 {
             color: #4a4a4a;
-            font-weight: 400;
             font-size: 16px;
-            line-height: 1.6;
+            margin-top: 15px;
             display: flex;
-            align-items: flex-start;
             gap: 12px;
-        }
-
-        .text-masakecil1::before,
-        .text1-masakecil1::before {
-            content: "•";
-            color: #000;
-            font-weight: bold;
-            font-size: 20px;
-            line-height: 1;
         }
 
         /* --- Pendidikan --- */
         .Pendidikan {
             background-color: #eef1f5;
-            width: 100%;
-            height: auto;
             padding-bottom: 80px;
         }
 
-        .text-pendidikan,
-        .text-perjalanan {
-            font-family: 'Poppins', sans-serif;
-            color: #1a1a1a;
+        .text-pendidikan {
             font-weight: 800;
             font-size: 28px;
             padding-top: 80px;
@@ -418,16 +341,14 @@
             padding: 0 20px;
         }
 
-        .list,
-        .list1 {
+        .list-item {
             background-color: white;
             border: 3px solid rgb(223, 225, 233);
             width: 100%;
             max-width: 400px;
-            height: auto;
-            padding-bottom: 20px;
             border-radius: 15px;
             overflow: hidden;
+            padding-bottom: 20px;
         }
 
         .grisda {
@@ -437,94 +358,116 @@
         }
 
         .judul-list {
-            font-family: 'Poppins', sans-serif;
-            color: #0c0c0c;
-            font-weight: 500;
             font-size: 15px;
-            padding-top: 20px;
-            padding-left: 20px;
+            padding: 20px 20px 0;
+            font-weight: 600;
         }
 
         .text-pendidikan1 {
-            font-family: 'Poppins', sans-serif;
             color: #4a4a4a;
-            font-weight: 400;
             font-size: 12px;
-            padding-top: 7.5px;
-            padding-left: 20px;
-            padding-right: 20px;
+            padding: 10px 20px;
         }
 
-        /* --- Perjalanan --- */
+        /* --- SECTION PERJALANAN (NEW VERTICAL TIMELINE - LINE LEFT OF YEAR) --- */
         .Perjalanan {
             background-color: white;
-            width: 100%;
-            height: auto;
-            padding-bottom: 80px;
+            padding: 100px 20px;
+            position: relative;
         }
 
-        .text-perjalanan {
-            padding-bottom: 30px;
+        .timeline-wrapper {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            padding: 0 20px;
         }
 
-        .card-perjalanan {
+        /* NEW VERTICAL TIMELINE LAYOUT */
+        .timeline-container {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            position: relative;
+        }
+
+        /* LEFT VERTICAL LINE */
+        .timeline-line {
+            width: 4px;
+            background: linear-gradient(to bottom, #000, #333);
+            height: 100%;
+            position: relative;
+            flex-shrink: 0;
+            border-radius: 2px;
+        }
+
+        /* TIMELINE ITEMS */
+        .timeline-items {
+            flex: 1;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            gap: 10px;
-            padding: 0 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            gap: 60px;
         }
 
-        .perjalanan-item {
+        .timeline-item {
             display: flex;
-            flex-direction: row;
             align-items: center;
-            justify-content: center;
-            gap: 18px;
-            margin-bottom: 15px;
-            width: 100%;
+            gap: 25px;
+            position: relative;
         }
 
-        .tahun {
-            font-family: 'Poppins', sans-serif;
-            color: #0c0c0c;
-            text-shadow: 5px 1px 2px rgba(0, 0, 0, 0.12);
-            font-weight: 600;
-            font-size: 15px;
-            width: 100px;
-            text-align: right;
+        /* YEAR COLUMN */
+        .tahun-col {
+            font-weight: 700;
+            font-size: 20px;
+            color: #1a1a1a;
+            min-width: 100px;
+            text-align: left;
+            flex-shrink: 0;
         }
 
+        /* CONTENT CARDS */
         .card-pelaksanaan {
-            background-color: #ffffffde;
-            border: 2px solid rgb(230, 232, 239);
+            background-color: #fff;
+            border: 1px solid #eee;
+            padding: 25px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            flex: 1;
+            transition: all 0.3s ease;
+        }
+
+        .card-pelaksanaan:hover {
+            transform: translateY(-5px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            width: 100%;
-            max-width: 550px;
-            min-height: 60px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            padding: 15px 20px;
         }
 
         .pelaksanaan {
-            font-family: 'Poppins', sans-serif;
-            color: #4a4a4a;
+            font-size: 16px;
             font-weight: 400;
-            font-size: 13px;
-            text-align: left;
+            line-height: 1.7;
+            color: #4a4a4a;
+        }
+
+        /* CIRCLE CONNECTORS */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -47px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 14px;
+            height: 14px;
+            background: #000;
+            border-radius: 50%;
+            z-index: 3;
+            border: 3px solid white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
         }
 
         /* --- Next Perjalanan --- */
         .next-perjalanan {
             background-color: #eef1f5;
-            width: 100%;
-            height: auto;
             padding: 80px 20px;
             display: flex;
             flex-wrap: wrap;
@@ -536,152 +479,101 @@
         .foto-halaman3 {
             width: 100%;
             max-width: 500px;
-            height: auto;
-            object-fit: cover;
             border-radius: 15px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
         }
 
         .judul-perjalanan {
-            font-family: 'Poppins', sans-serif;
             font-size: 30px;
             padding-bottom: 20px;
+            font-weight: 700;
         }
 
         .text-item {
             font-size: 15px;
-            font-weight: 100;
-            text-align: left;
             padding-bottom: 10px;
-            font-family: 'Poppins', sans-serif;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        .text-item::before {
-            content: "•";
-            color: #000;
-            font-size: 20px;
-            line-height: 1;
-            padding-right: 15px;
-        }
-
-        /* --- Footer Responsif --- */
+        /* --- Footer --- */
         footer {
             background: linear-gradient(to right, #12192a 30%, #25324e 100%);
-            width: 100%;
-            height: auto;
-            padding: 60px 20px 40px 20px;
+            padding: 60px 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
-        }
-
-        footer h2 {
-            font-family: 'Poppins', sans-serif;
             color: white;
-            font-size: 25px;
-            font-weight: 700;
         }
 
         footer h4 {
-            font-family: 'Poppins', sans-serif;
-            color: rgb(233, 233, 233);
-            font-size: 13px;
             font-weight: 200;
-            padding-top: 15px;
-            padding-bottom: 25px;
-            width: 100%;
+            font-size: 13px;
             max-width: 800px;
+            padding: 20px 0;
             line-height: 1.6;
         }
 
         footer a {
-            background-color: white;
-            font-family: 'Poppins', sans-serif;
+            background: white;
+            color: black;
             padding: 10px 20px;
             border-radius: 40px;
             text-decoration: none;
-            color: black;
             font-size: 12px;
             font-weight: 500;
         }
 
-        footer h5 {
-            font-family: 'Poppins', sans-serif;
-            color: rgb(171, 171, 171);
-            font-size: 12px;
-            font-weight: 200;
-            padding-top: 30px;
-        }
-
-        @media (max-width: 900px) {
-            .hero {
-                padding-top: 130px;
-                text-align: center;
-            }
-
-            .text-pembuka2 {
-                margin: 0 auto;
-            }
-
-            .button1 {
-                margin: 0 auto;
-            }
-
-            nav {
-                width: 95%;
-                flex-direction: column;
-                gap: 10px;
-                padding: 15px;
-                border-radius: 20px;
-            }
-
-            nav h2 {
-                padding-left: 0;
-            }
-        }
-
         @media (max-width: 768px) {
+            nav {
+                width: 90%;
+                flex-direction: column;
+            }
 
-            /* Matikan efek ketik di layar sangat kecil agar text tidak terpotong */
-            .typewriter-effect {
-                white-space: normal;
-                animation: none;
-                border-right: none;
+            .timeline-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .timeline-line {
+                align-self: stretch;
+                order: 2;
+                height: 4px;
                 width: 100%;
+                background: linear-gradient(to right, #000, #333);
             }
 
-            .text-masakecil {
-                text-align: center;
+            .timeline-items {
+                order: 1;
+                gap: 40px;
             }
 
-            .text-masakecil::after {
+            .timeline-item {
+                flex-direction: column;
+                align-items: flex-start !important;
+                gap: 15px;
+            }
+
+            .tahun-col {
+                font-size: 18px;
+                order: 2;
+                align-self: flex-start;
+            }
+
+            .timeline-item::before {
                 left: 50%;
+                top: 0;
                 transform: translateX(-50%);
             }
 
-            .perjalanan-item {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 5px;
-            }
-
-            .tahun {
-                text-align: left;
-            }
-
-            .card-pelaksanaan {
-                text-align: left;
-            }
-
-            .next-perjalanan {
-                flex-direction: column-reverse;
-                text-align: center;
-            }
-
-            .text-item {
-                text-align: left;
-                margin-left: 20px;
+            .typewriter-effect {
+                white-space: normal;
+                animation: none;
+                border: none;
+                width: 100%;
             }
         }
     </style>
@@ -691,16 +583,14 @@
     <nav>
         <h2>Bu Rumasni</h2>
         <ul>
-            <li>
-                <a href="#">Profil</a>
-                <a href="#">Perjalanan</a>
-                <a href="#">Pendidikan</a>
-                <a href="#">Kemerdekaan</a>
-            </li>
+            <li><a href="#">Profil</a></li>
+            <li><a href="#perjalanan-section">Perjalanan</a></li>
+            <li><a href="#">Pendidikan</a></li>
+            <li><a href="#">Kemerdekaan</a></li>
         </ul>
     </nav>
 
-    <!-- Header / Pembuka dibungkus agar berdampingan rapi -->
+    <!-- HERO SECTION -->
     <div class="hero">
         <div class="hero-text">
             <h5 class="text-pembuka">GURU SMK TI BALI GLOBAL DENPASAR</h5>
@@ -712,158 +602,171 @@
         <img src="guru.png" class="foto">
     </div>
 
+    <!-- CARDS INFO -->
     <div class="card" data-aos="fade-up">
-        <div class="card1">
+        <div class="card-item">
             <h5 class="text-card1">Nama Lahir</h5>
             <h3 class="text1-card1">Ni Wayan Rumasni</h3>
         </div>
-
-        <div class="card2">
+        <div class="card-item">
             <h5 class="text-card1">Tahun Lahir</h5>
             <h3 class="text1-card1">9 Desember 1970</h3>
         </div>
-
-        <div class="card3">
+        <div class="card-item">
             <h5 class="text-card1">Tempat Lahir</h5>
             <h3 class="text1-card1">Tabanan</h3>
         </div>
-
-        <div class="card4">
+        <div class="card-item">
             <h5 class="text-card1">Jabatan</h5>
             <h3 class="text1-card1">Kepala Perpustakaan</h3>
         </div>
     </div>
 
+    <!-- ANGGOTA KELOMPOK -->
     <h1 class="text-anggota">ANGGOTA KELOMPOK</h1>
     <div class="anggota-kelompok">
-        <div class="card-anggota">
-            <img src="image copy 2.png" class="foto-kelompok">
-            <h4 class="nama-anggota">Lionel Justin Setiawan</h4>
+        <div class="card-anggota"><img src="image copy 2.png" class="foto-kelompok">
+            <h4 class="nama-anggota">Lionel Justin</h4>
             <h5 class="jabatan-anggota">Ketua Kelompok</h5>
         </div>
-
-        <div class="card-anggota1">
-            <img src="image copy 2.png" class="foto-kelompok">
-            <h4 class="nama-anggota">I Wayan Agus Aditya Pratama</h4>
+        <div class="card-anggota"><img src="image copy 2.png" class="foto-kelompok">
+            <h4 class="nama-anggota">Agus Aditya</h4>
             <h5 class="jabatan-anggota">Anggota Kelompok</h5>
         </div>
-
-        <div class="card-anggota1">
-            <img src="image copy 2.png" class="foto-kelompok">
-            <h4 class="nama-anggota">Nicolas Galung Putra</h4>
+        <div class="card-anggota"><img src="image copy 2.png" class="foto-kelompok">
+            <h4 class="nama-anggota">Nicolas Galung</h4>
             <h5 class="jabatan-anggota">Anggota Kelompok</h5>
         </div>
-
-        <div class="card-anggota1">
-            <img src="image copy 2.png" class="foto-kelompok">
-            <h4 class="nama-anggota">I Kadek Putra Suryawan</h4>
+        <div class="card-anggota"><img src="image copy 2.png" class="foto-kelompok">
+            <h4 class="nama-anggota">Putra Suryawan</h4>
             <h5 class="jabatan-anggota">Anggota Kelompok</h5>
         </div>
-
-        <div class="card-anggota2">
-            <img src="image copy 2.png" class="foto-kelompok">
+        <div class="card-anggota"><img src="image copy 2.png" class="foto-kelompok">
             <h4 class="nama-anggota">Albin Ivandito</h4>
             <h5 class="jabatan-anggota">Anggota Kelompok</h5>
         </div>
     </div>
 
-    <section class="masakecil">
-        <div class="container-masakecil" id="masa-kecil">
+    <!-- MASA KECIL -->
+    <section class="masakecil" id="masa-kecil">
+        <div class="container-masakecil">
             <img src="image copy.png" class="foto-masakecil" data-aos="fade-right">
             <div class="text-content-masakecil">
-                <h3 class="text-masakecil" data-aos="fade-left" data-aos-delay="100">Masa Kecil</h3>
-                <div class="list-masakecil">
-                    <h5 class="text-masakecil1" data-aos="fade-left" data-aos-delay="200">Masa kecil banyak dihabiskan
-                        di Blitar.</h5>
-                    <h5 class="text1-masakecil1" data-aos="fade-left" data-aos-delay="300">Pernah tinggal dengan kakek
-                        di Tulungagung.</h5>
-                    <h5 class="text1-masakecil1" data-aos="fade-left" data-aos-delay="400">Sempat sekolah namun pindah
-                        ke Mojokerto.</h5>
-                </div>
+                <h3 class="text-masakecil" data-aos="fade-left">Masa Kecil</h3>
+                <h5 class="text-masakecil1" data-aos="fade-left"><span>•</span> Masa kecil banyak dihabiskan di Blitar.
+                </h5>
+                <h5 class="text-masakecil1" data-aos="fade-left"><span>•</span> Pernah tinggal dengan kakek di
+                    Tulungagung.</h5>
+                <h5 class="text-masakecil1" data-aos="fade-left"><span>•</span> Sempat sekolah namun pindah ke
+                    Mojokerto.</h5>
             </div>
         </div>
     </section>
 
+    <!-- PENDIDIKAN -->
     <section class="Pendidikan">
         <h3 class="text-pendidikan" data-aos="fade-down">Pendidikan</h3>
         <div class="list-pendidikan">
-            <div class="list" data-aos="fade-up">
-                <img src="grisda.png" class="grisda">
-                <h3 class="judul-list">Sekolah Menengah Pertama (SMP)</h3>
-                <h5 class="text-pendidikan1">Menempuh pendidikan di SMP PGRI 2 Denpasar.</h5>
+            <div class="list-item" data-aos="fade-up"><img src="grisda.png" class="grisda">
+                <h3 class="judul-list">SMP PGRI 2 Denpasar</h3>
+                <h5 class="text-pendidikan1">Menempuh pendidikan menengah pertama di Denpasar.</h5>
             </div>
-
-            <div class="list1" data-aos="fade-up" data-aos-delay="100">
-                <img src="wirabhakti.png" class="grisda">
-                <h3 class="judul-list">Sekolah Menengah Atas (SMA)</h3>
-                <h5 class="text-pendidikan1">Melanjutkan pendidikan di SMA Wira Bhakti Denpasar</h5>
+            <div class="list-item" data-aos="fade-up" data-aos-delay="100"><img src="wirabhakti.png" class="grisda">
+                <h3 class="judul-list">SMA Wira Bhakti</h3>
+                <h5 class="text-pendidikan1">Melanjutkan pendidikan menengah atas di Denpasar.</h5>
             </div>
-
-            <div class="list1" data-aos="fade-up" data-aos-delay="200">
-                <img src="undiksha.png" class="grisda">
-                <h3 class="judul-list">Kuliah</h3>
-                <h5 class="text-pendidikan1">S1 hingga S2 di Kampus Undikhsa dengan jurusan Bahasa Indonesia</h5>
+            <div class="list-item" data-aos="fade-up" data-aos-delay="200"><img src="undiksha.png" class="grisda">
+                <h3 class="judul-list">Universitas Undiksha</h3>
+                <h5 class="text-pendidikan1">S1 hingga S2 di Kampus Undikhsa dengan jurusan Bahasa Indonesia.</h5>
             </div>
         </div>
     </section>
 
-    <section class="Perjalanan">
-        <h3 class="text-perjalanan" data-aos="fade-down">Perjalanan</h3>
-        <div class="card-perjalanan">
-            <div class="perjalanan-item" data-aos="fade-right" data-aos-delay="100">
-                <h3 class="tahun">1927</h3>
-                <div class="card-pelaksanaan">
-                    <h2 class="pelaksanaan">Mendirikan Partai Nasional Indonesia.</h2>
-                </div>
-            </div>
-            <div class="perjalanan-item" data-aos="fade-right" data-aos-delay="200">
-                <h3 class="tahun">1929</h3>
-                <div class="card-pelaksanaan">
-                    <h2 class="pelaksanaan">Ditangkap Belanda dan dipenjara.</h2>
-                </div>
-            </div>
-            <div class="perjalanan-item" data-aos="fade-right" data-aos-delay="250">
-                <h3 class="tahun">1930</h3>
-                <div class="card-pelaksanaan">
-                    <h2 class="pelaksanaan">Menulis pledoi Indonesia Menggugat.</h2>
-                </div>
-            </div>
-            <div class="perjalanan-item" data-aos="fade-right" data-aos-delay="300">
-                <h3 class="tahun">1933 - 1938</h3>
-                <div class="card-pelaksanaan">
-                    <h2 class="pelaksanaan">Diasingkan ke Flores dan Bengkulu.</h2>
-                </div>
+    <!-- PERJALANAN DENGAN GARIS MELIUK -->
+    <section class="Perjalanan" id="perjalanan-section">
+        <h3 class="text-pendidikan" style="padding-top:0; margin-bottom:60px;" data-aos="fade-down">Perjalanan</h3>
+
+        <div class="timeline-wrapper">
+            <div class="timeline-container" data-aos="fade-up">
+                <!-- VERTICAL LINE LEFT OF YEAR -->
+                <div class="timeline-line"></div>
+
+    </section>
+    <div class="timeline-items">
+        <div class="timeline-item">
+            <div class="tahun-col">1927</div>
+            <div class="card-pelaksanaan">
+                <h2 class="pelaksanaan">Mendirikan Partai Nasional Indonesia.</h2>
             </div>
         </div>
-    </section>
 
+        <div class="timeline-item">
+            <div class="tahun-col">1929</div>
+            <div class="card-pelaksanaan">
+                <h2 class="pelaksanaan">Ditangkap Belanda dan dipenjara.</h2>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="tahun-col">1930</div>
+            <div class="card-pelaksanaan">
+                <h2 class="pelaksanaan">Menulis pledoi Indonesia Menggugat.</h2>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="tahun-col">1933 - 1938</div>
+            <div class="card-pelaksanaan">
+                <h2 class="pelaksanaan">Diasingkan ke Flores dan Bengkulu.</h2>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- NEXT PERJALANAN (RENGASDENGKLOK) -->
     <section class="next-perjalanan">
-        <div class="text-perjalanan" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+        <div class="hero-text" data-aos="fade-right">
             <h3 class="judul-perjalanan">Rengasdengklok</h3>
-            <li class="text-item">Terjadi 16 Agustus 1945.</li>
-            <li class="text-item">Pemuda mendesak proklamasi segera.</li>
-            <li class="text-item">Momentum menuju kemerdekaan.</li>
+            <li class="text-item"><span>•</span> Terjadi 16 Agustus 1945.</li>
+            <li class="text-item"><span>•</span> Pemuda mendesak proklamasi segera.</li>
+            <li class="text-item"><span>•</span> Momentum menuju kemerdekaan.</li>
         </div>
-        <img src="image copy 2.png" class="foto-halaman3" data-aos="zoom-in-up">
+        <img src="image copy 2.png" class="foto-halaman3" data-aos="zoom-in">
     </section>
 
+    <!-- FOOTER -->
     <footer>
-        <h2 data-aos="fade-down" data-aos-delay="220">Proklamasi Kemerdekaan</h2>
-        <h4 data-aos="fade-down" data-aos-delay="250">17 Agustus 1945, Soekarno membacakan teks proklamasi. Sehari
-            kemudian beliau dan Mohammad Hatta diangkat
+        <h2 data-aos="fade-down">Proklamasi Kemerdekaan</h2>
+        <h4>17 Agustus 1945, Soekarno membacakan teks proklamasi. Sehari kemudian beliau dan Mohammad Hatta diangkat
             sebagai Presiden dan Wakil Presiden RI.</h4>
         <a href="#">Tokoh Proklamator</a>
-        <h5>© 2026 Biografi Soekarno</h5>
+        <h5 style="color: #6a6a6a; font-size: 11px; margin-top: 30px;">© 2026 Biografi Soekarno</h5>
     </footer>
 
     <script>
-        AOS.init({
-            once: false,
-            duration: 800,
-            offset: 100
+        AOS.init({ duration: 800, once: false });
+
+        const path = document.querySelector('#curvy-path');
+        const pathLength = path.getTotalLength();
+        path.style.strokeDasharray = pathLength;
+        path.style.strokeDashoffset = pathLength;
+
+        window.addEventListener('scroll', () => {
+            const section = document.querySelector('#perjalanan-section');
+            const scrollPos = window.scrollY;
+            const sectionOffset = section.offsetTop;
+            const sectionHeight = section.offsetHeight;
+            const windowHeight = window.innerHeight;
+
+            let progress = (scrollPos - sectionOffset + (windowHeight / 1.5)) / (sectionHeight);
+
+            if (progress < 0) progress = 0;
+            if (progress > 1) progress = 1;
+
+            path.style.strokeDashoffset = pathLength - (progress * pathLength);
         });
     </script>
-
 </body>
 
 </html>
