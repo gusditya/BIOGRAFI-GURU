@@ -3,17 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <title>Biografi</title>
+    <title>Biografi Ni Wayan Rumasni</title>
     <style>
       * {
         margin: 0;
@@ -114,8 +109,11 @@
       .text-pembuka {
         font-family: "Poppins", sans-serif;
         font-weight: 200;
-        color: #3c3c3c;
-        font-size: 12px;
+        color: #f382e2;
+        font-size: 14px;
+        margin-bottom: 10px;
+        font-weight: 600;
+        letter-spacing: 2px;
       }
 
       .text-pembuka1 {
@@ -128,7 +126,7 @@
       /* Perbaikan Typewriter agar 100% mengikuti panjang text */
       .typewriter-effect {
         overflow: hidden;
-        border-right: 3px solid #000;
+        border-right: 3px solid #000000;
         white-space: nowrap;
         width: fit-content;
         animation:
@@ -166,7 +164,7 @@
 
         25%,
         75% {
-          border-color: #000;
+          border-color: #f382e2;
         }
       }
 
@@ -178,12 +176,12 @@
         padding-bottom: 30px;
         width: 100%;
         max-width: 450px;
-        font-size: 12.5px;
+        font-size: 13px;
         line-height: 1.6;
       }
 
       .button1 {
-        background-color: black;
+        background-color: #f382e2;
         color: white;
         text-decoration: none;
         font-family: "Poppins", sans-serif;
@@ -210,12 +208,16 @@
       /* --- Cards Responsif --- */
       .card {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        overflow-x: auto;
+        scrollbar-width: none;
         margin-top: 70px;
         gap: 20px;
         padding: 0 20px;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
+      }
+
+      .card::-webkit-scrollbar {
+        display: none;
       }
 
       .card1,
@@ -225,13 +227,25 @@
       .card5 {
         background-color: white;
         border: 2px solid rgb(223, 225, 233);
-        width: 100%;
-        max-width: 350px;
-        height: 95px;
+        min-width: 300px;
+        height: 125px;
+        flex-shrink: 0;
         border-radius: 15px;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        box-shadow: -1px 5px 0px -2px #f382e2;
+      }
+
+      .card1 i,
+      .card2 i,
+      .card3 i,
+      .card4 i,
+      .card5 i {
+        font-size: 27px;
+        color: #f382e2;
+        padding-left: 20px;
+        padding-bottom: 10px;
       }
 
       /* --- Anggota Kelompok --- */
@@ -500,7 +514,6 @@
       .tahun {
         font-family: "Poppins", sans-serif;
         color: #0c0c0c;
-        text-shadow: 5px 1px 2px rgba(0, 0, 0, 0.12);
         font-weight: 600;
         font-size: 15px;
         width: 100px;
@@ -710,13 +723,12 @@
     <!-- Header / Pembuka dibungkus agar berdampingan rapi -->
     <div class="hero">
       <div class="hero-text">
-        <h5 class="text-pembuka">GURU SMK TI BALI GLOBAL DENPASAR</h5>
+        <h5 class="text-pembuka">PROFIL PENDIDIK</h5>
         <h1 class="text-pembuka1 typewriter-effect">
           Ni Wayan Rumasni, S.Pd., M.Pd
         </h1>
         <h4 class="text-pembuka2">
-          Salah satu Guru yang mengajar di SMK Ti Bali Global Denpasar dengan
-          gaya bahasa yang digemari siswa
+          Seorang pendidik berdedikasi di SMK TI Bali Global Denpasar yang dikenal dengan pendekatan sastra yang humanis dan menginspirasi ribuan siswa.
         </h4>
         <a href="#masa-kecil" class="button1">Jelajahi Biografi</a>
       </div>
@@ -725,23 +737,33 @@
 
     <div class="card" data-aos="fade-up">
       <div class="card1">
+        <i class="fa-solid fa-book-open"></i>
         <h5 class="text-card1">Nama Lahir</h5>
         <h3 class="text1-card1">Ni Wayan Rumasni</h3>
       </div>
 
       <div class="card2">
+        <i class="fa-solid fa-calendar-days"></i>
         <h5 class="text-card1">Tahun Lahir</h5>
         <h3 class="text1-card1">9 Desember 1970</h3>
       </div>
 
       <div class="card3">
+        <i class="fa-solid fa-location-dot"></i>
         <h5 class="text-card1">Tempat Lahir</h5>
         <h3 class="text1-card1">Tabanan</h3>
       </div>
 
       <div class="card4">
+        <i class="fa-solid fa-user-tie"></i>
         <h5 class="text-card1">Jabatan</h5>
-        <h3 class="text1-card1">Kepala Perpustakaan & Guru Bahasa Indonesia</h3>
+        <h3 class="text1-card1">Kepala Perpustakaan</h3>
+      </div>
+
+      <div class="card4">
+        <i class="fa-solid fa-briefcase"></i>
+        <h5 class="text-card1">Spesialisasi</h5>
+        <h3 class="text1-card1">Bahasa Indonesia</h3>
       </div>
 
         <div class="card5">
@@ -750,7 +772,7 @@
       </div>
     </div>
 
-    
+
 
     <section class="Perjalanan">
       <h3 class="text-perjalanan" data-aos="fade-down">
@@ -886,7 +908,7 @@
       <h2 data-aos="fade-down" data-aos-delay="220">Biografi Bu Ni Wayan Rumasni, S.Pd., M.Pd</h2>
       <h4 data-aos="fade-down" data-aos-delay="250">
         Selama 20 Tahun lamannya, Bu Ni Wayan Rumasni sudah mengabdi menjadi guru pengajar dan juga sekarang menjadi
-        penjaga perpustakaan di SMK TI Bali Global Denpasar. 
+        penjaga perpustakaan di SMK TI Bali Global Denpasar.
       </h4>
       <a href="#">Guru - Kepala Perpustakaan</a>
       <h5>© 2026 Biografi Ni Wayan Rumasni</h5>
