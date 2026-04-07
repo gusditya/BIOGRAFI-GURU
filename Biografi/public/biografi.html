@@ -179,26 +179,30 @@
         /* --- Bio Cards --- */
         .card {
             display: flex;
-            overflow-x: auto;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
             padding: 70px 20px 30px;
-            scrollbar-width: none;
-        }
-
-        .card::-webkit-scrollbar {
-            display: none;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .card-item {
             background: white;
             border: 2px solid rgb(223, 225, 233);
-            min-width: 300px;
+            width: 260px;
             height: 125px;
             border-radius: 15px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             box-shadow: -1px 5px 0px -2px #f382e2;
+            transition: 0.3s;
+        }
+
+        .card-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(243, 130, 226, 0.2);
         }
 
         .card-item i {
@@ -344,6 +348,140 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* --- Testimonial Siswa --- */
+        .testimonial-section {
+            background: linear-gradient(135deg, #fdf2fb 0%, #f0e6ff 100%);
+            padding: 80px 20px;
+        }
+
+        .testimonial-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .testimonial-header h5 {
+            color: #f382e2;
+            font-weight: 600;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+
+        .testimonial-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2rem;
+            margin-top: 10px;
+            color: #1a1a2e;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+            border: 1px solid #f0e0f0;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(243, 130, 226, 0.15);
+        }
+
+        .testimonial-card::before {
+            content: '\201C';
+            font-size: 60px;
+            color: #f382e2;
+            opacity: 0.2;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+
+        .testimonial-stars {
+            color: #f5c518;
+            font-size: 14px;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            font-size: 13.5px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border-top: 1px solid #f0e0f0;
+            padding-top: 15px;
+        }
+
+        .testimonial-avatar {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f382e2, #a855f7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .testimonial-author-name {
+            font-weight: 600;
+            font-size: 14px;
+            color: #1a1a2e;
+        }
+
+        .testimonial-author-role {
+            font-size: 11px;
+            color: #999;
+        }
+
+        .testimonial-rating-summary {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .rating-big {
+            font-size: 48px;
+            font-weight: 800;
+            color: #1a1a2e;
+            line-height: 1;
+        }
+
+        .rating-stars-big {
+            color: #f5c518;
+            font-size: 22px;
+            letter-spacing: 3px;
+            margin: 8px 0;
+        }
+
+        .rating-count {
+            font-size: 13px;
+            color: #999;
         }
 
         .p-card {
@@ -455,8 +593,8 @@
 
         /* --- Footer --- */
         footer {
-            background: linear-gradient(to right, #12192a 30%, #25324e 100%);
-            padding: 60px 20px;
+            background: linear-gradient(135deg, #12192a 0%, #1e2d4a 50%, #2a3d5e 100%);
+            padding: 60px 20px 30px;
             color: white;
             text-align: center;
         }
@@ -476,14 +614,45 @@
             font-weight: 300;
         }
 
-        footer a {
-            background: white;
-            color: black;
-            padding: 10px 25px;
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 25px 0;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(5px);
+            color: white;
+            padding: 10px 20px;
             border-radius: 40px;
             text-decoration: none;
             font-size: 12px;
-            font-weight: 600;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: 0.3s;
+        }
+
+        .footer-social a:hover {
+            background: #f382e2;
+            border-color: #f382e2;
+            transform: translateY(-3px);
+        }
+
+        .footer-social a i {
+            font-size: 16px;
+        }
+
+        .footer-divider {
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #f382e2, transparent);
+            margin: 25px auto;
         }
 
         @media (max-width: 850px) {
@@ -591,16 +760,19 @@
 
     <!-- Section Perjalanan (Timeline Kanan-Kiri) -->
     <section class="Perjalanan" id="perjalanan">
-        <h2 style="text-align:center; font-size:28px; font-weight:800; margin-bottom:50px;">Perjalanan Pendidikan</h2>
+        <h5 style="text-align:center; color: #f382e2; font-weight: 600; letter-spacing: 2px;">EDUCATION JOURNEY</h5>
+        <h2
+            style="text-align:center; font-family: 'Playfair Display', serif; font-size:2.2rem; margin-top:10px; margin-bottom:50px;">
+            Perjalanan Pendidikan</h2>
         <div class="timeline-wrapper">
             <div class="timeline-item" data-aos="fade-right">
-                <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <span class="timeline-year">Masa SD</span>
                     <h4 style="color:#f382e2">SD di Tabanan</h4>
                     <p style="font-size: 12px; color: #666;">Menempuh pendidikan dasar di tanah kelahirannya, Tabanan,
                         Bali.</p>
                 </div>
+                <div class="timeline-dot"></div>
                 <div style="width:45%"></div>
             </div>
             <div class="timeline-item" data-aos="fade-left">
@@ -613,13 +785,13 @@
                 </div>
             </div>
             <div class="timeline-item" data-aos="fade-right">
-                <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <span class="timeline-year">Masa SMA</span>
                     <h4 style="color:#f382e2">SMA Wira Bhakti Denpasar</h4>
                     <p style="font-size: 12px; color: #666;">Menyelesaikan masa sekolah menengah atas dengan penuh
                         semangat.</p>
                 </div>
+                <div class="timeline-dot"></div>
                 <div style="width:45%"></div>
             </div>
             <div class="timeline-item" data-aos="fade-left">
@@ -673,6 +845,84 @@
         </div>
     </section>
 
+    <!-- Section Pendapat Siswa -->
+    <section class="testimonial-section" id="testimonial">
+        <div class="testimonial-header" data-aos="fade-up">
+            <h5>PENDAPAT SISWA</h5>
+            <h2>Apa Kata Mereka?</h2>
+        </div>
+        <div class="testimonial-rating-summary" data-aos="fade-up">
+            <div class="rating-big">4.9</div>
+            <div class="rating-stars-big">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="rating-count">Dari puluhan siswa yang pernah diajar</div>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card" data-aos="fade-up">
+                <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Bu Rumasni adalah guru yang sangat sabar dan penuh perhatian. Beliau selalu
+                    memotivasi kami untuk terus belajar dan tidak pernah menyerah. Cara mengajarnya sangat menyenangkan
+                    dan mudah dipahami."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">A</div>
+                    <div>
+                        <div class="testimonial-author-name">Ngakan Putu Satria Dewangga</div>
+                        <div class="testimonial-author-role">Siswa Kelas XI RPL 5</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p class="testimonial-text">"Saya sangat terinspirasi oleh Bu Rumasni. Beliau mengajarkan sastra dengan
+                    cara yang hidup dan penuh makna. Berkat beliau, saya jadi mencintai dunia literasi dan rajin membaca
+                    buku."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">D</div>
+                    <div>
+                        <div class="testimonial-author-name">Nararya Putra Winangun</div>
+                        <div class="testimonial-author-role">Siswa Kelas XI RPL 5</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p class="testimonial-text">"Bu Rumasni bukan hanya sekedar guru, tapi juga sosok ibu di sekolah. Beliau
+                    selalu mendengarkan keluh kesah kami dan memberikan nasihat yang bijaksana. Perpustakaan jadi tempat
+                    favorit kami."</p>
+                <div class="testimonial-author">
+                    <div class="testimonial-avatar">K</div>
+                    <div>
+                        <div class="testimonial-author-name">Nandika Haresvara Paryana</div>
+                        <div class="testimonial-author-role">Siswa Kelas XI RPL 5</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Anggota Kelompok (Lengkap 5 Orang) -->
     <section>
         <h1 class="text-anggota">ANGGOTA KELOMPOK</h1>
@@ -708,8 +958,19 @@
     <footer>
         <h2>Biografi Ni Wayan Rumasni, M.Pd</h2>
         <h4>Mendedikasikan hidupnya untuk literasi di SMK TI Bali Global Denpasar.</h4>
-        <a href="#">Guru - Kepala Perpustakaan</a>
-        <h5 style="margin-top: 30px; opacity: 0.5; font-size: 11px;">© 2026 Biografi Ni Wayan Rumasni</h5>
+        <div class="footer-social">
+            <a href="https://wa.me/6285737006797" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i> 085737006797
+            </a>
+            <a href="https://instagram.com/wayanrumasni" target="_blank">
+                <i class="fa-brands fa-instagram"></i> @wayanrumasni
+            </a>
+            <a href="https://facebook.com/wayan.rumasni" target="_blank">
+                <i class="fa-brands fa-facebook"></i> Wayan Rumasni
+            </a>
+        </div>
+        <div class="footer-divider"></div>
+        <h5 style="margin-top: 15px; opacity: 0.5; font-size: 11px;">© 2026 Biografi Ni Wayan Rumasni</h5>
     </footer>
 
     <script>
